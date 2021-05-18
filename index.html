@@ -21,8 +21,7 @@
         <source src="video/kgr_video.mp4" type="video/mp4">
       </video>
       <img id="poster" src="images/02_main/poster_final.png" alt="무한한 기회의 고구려 대학교">
-      <div id="notice" class="notice p_r">
-        <img class="notice_f" src="images/02_main/notice_final.jpg" alt="공지사항">
+      <div id="notice" alt="공지사항">
         <a href="" class="news p_a"><img src="images/02_main/notice1_goods.png" alt=""></a>
         <a href="" class="news p_a"><img src="images/02_main/notice2_fin_1.png" alt=""></a>
         <a href="" class="news p_a"><img src="images/02_main/notice_3final.png" alt=""></a>
@@ -30,9 +29,18 @@
       <div id="qnapage" class="qnapage p_r">
         <img src="images/02_main/qnapage_final2.jpg" alt="재학생에게 물어보는 큐앤에이" class="p_a">
         <!-- <input type="image" src="images/02_main/searchbutton.png" class="search p_a f_l" alt="검색"></input> -->
-        <a href=""><img src="images/02_main/searchbutton.png" class="search p_a " alt="검색"></a>
-        <img src="images/02_main/search_effect.png" class="search_e p_al" alt=""></a>
-        <a href=""><img src="images/02_main/moreanswers3.png" class="more p_a" alt="더 많은 답변 보기"></a>
+        <div id="searchb">
+          <a href="">
+            <img src="images/02_main/search_effect.png" class="search_e p_a" alt="">
+            <img src="images/02_main/searchbutton.png" class="search p_a " alt="검색">
+          </a>
+        </div>
+        <div id="moreb">
+          <a href="">
+            <img src="images/02_main/more_effect.png" class="more_e p_a" alt="">
+            <img src="images/02_main/moreanswers3.png" class="more p_a" alt="더 많은 답변 보기">
+          </a>
+        </div>
       </div>
     </section>
     <footer id="footer" class="footer p_a">
@@ -54,30 +62,28 @@
           <p>KOGURYEO COLLEGE. All rights reserved</p>
         </div>
         <div id="block3" class="f_block f_l">
-          <div class="bar p_r">
-            <label for="shortcut1"></label>
-            <select id="shortcut1" name="shortcut1">
-              <option value="">학과홈페이지 바로가기</option>
-              <option value="">치위생과</option>
-              <option value="">곤충산업복지과</option>
-              <option value="">미용관광복지과</option>
-              <option value="">토목조경과</option>
-              <option value="">에너지복지과</option>
-              <option value="">유아교육과</option>
-            </select>
-            <div class="GO"><button type="submit">GO</button></div>
+          <div class="family d_f p_r">
+            <a href="" class="btn_fopen p_r" role="button">학과홈페이지 바로가기</a>
+            <ul>
+              <li><a href="">치위생과</a></li>
+              <li><a href="">곤충산업복지과</a></li>
+              <li><a href="">미용관광복지과</a></li>
+              <li><a href="">토목조경과</a></li>
+              <li><a href="">에너지복지과</a></li>
+              <li><a href="">유아교육과</a></li>
+            </ul>
+            <a href="" class="btn_go">GO</a>
           </div>
-          <div class="bar">
-            <label for="shortcut2"></label>
-            <select id="shortcut2" name="shortcut2">
-              <option value="">부속기관 바로가기</option>
-              <option value="">도서관</option>
-              <option value="">정보전산원</option>
-              <option value="">생활관</option>
-              <option value="">어학원</option>
-              <option value="">평생교육원</option>
-            </select>
-            <div class="GO"><button type="submit">GO</button></div>
+          <div class="family d_f p_r">
+            <a href="" class="btn_fopen p_r" role="button">부속기관 바로가기</a>
+            <ul>
+              <li><a href="">도서관과</a></li>
+              <li><a href="">정보전산원</a></li>
+              <li><a href="">생활관</a></li>
+              <li><a href="">어학원</a></li>
+              <li><a href="">평생교육원</a></li>
+            </ul>
+            <a href="" class="btn_go">GO</a>
           </div>
           <ul class="f_navitem1">
             <li><a href="">대학소개</a></li>
