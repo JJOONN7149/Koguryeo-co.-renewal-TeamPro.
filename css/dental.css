@@ -7,7 +7,7 @@ th, td,p{margin: 0;padding: 0;}
 table{border-spacing: 0;border-collapse: collapse;} 
 h4{display: block;}
 .clearfix::after{clear: both;display: block;content: "";}
-#section{height: 5200px;}
+#section{height: 4759px;}
 
 #top{color: red;text-align: center;}
 #top + img{height: 450px;}
@@ -78,7 +78,7 @@ h4::after{content: "";position: absolute;background: url("../images/10_dental/re
 
 #news a{float: left;}
 
-#news a img{border: 1px solid #73615B;}
+#news a img{border: 1px solid #000;}
 #news a{position: relative;}
 #news a + a{margin-left: 10px;}
 #news > a:first-child img{width: 494px;height: 494px;}
