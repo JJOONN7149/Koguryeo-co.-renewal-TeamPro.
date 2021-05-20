@@ -7,6 +7,7 @@ th, td,p{margin: 0;padding: 0;}
 table{border-spacing: 0;border-collapse: collapse;} 
 h4{display: block;}
 .clearfix::after{clear: both;display: block;content: "";}
+#section{height: 4759px;}
 
 #top{color: red;text-align: center;}
 #top + img{height: 450px;}
@@ -50,8 +51,7 @@ h4::after{content: "";position: absolute;background: url("../images/10_dental/re
 #curriculum #column1 .txtbox:nth-child(1), #curriculum #column2 .txtbox:nth-child(1){margin-bottom: 18px;}
 #curriculum .column .txtbox strong + p{font-size: 16px;margin-top: 5px;}
 
-#process{text-align: center;margin-top: 20px;}
-#process{border-top: 1px solid #73615B;border-top: 1px solid #73615B;}
+#process{text-align: center;margin-top: 50px;}
 #process td{border-left: 1px solid #73615B;border-bottom: 1px solid #73615B;}
 #process th{border-bottom: 1px solid #73615B;background-color: #e9c7a4;}
 #process th + th{border-left: 1px solid #73615B;}
@@ -62,6 +62,7 @@ h4::after{content: "";position: absolute;background: url("../images/10_dental/re
 .wid388{width: 388px;}
 .wid396{width: 396px;}
  
+#tooth{border: 1px solid red;margin-bottom: 50px;width: 100%;height: 735px;}
 .toothprof{width: 404px;height: 495px;border: 1px solid #000;text-align: center;background: url("../images/10_dental/tooth.png");position: relative;float: left;}
 .toothprof > *{display: block;position: absolute;}
 .toothprof img{width: 197px;height: 197px;top: 70px;left: 86.3px;}
@@ -71,6 +72,15 @@ h4::after{content: "";position: absolute;background: url("../images/10_dental/re
 .toothprof a::after{content: "";background: url("../images/10_dental/arrow-forward_white.png") no-repeat; width: 10px; height: 17px;border: 1px solid #000;position: absolute;top:5.5px;left: 66px;}
 #tooth1 , #tooth2, #tooth3{position: relative;text-align: center;}
 .toothshadow{background: url("../images/10_dental/toothshadow.png") no-repeat;width: 400px;height: 300px;position: absolute;top: 480px;}
-.toothshadow p{margin-top: 100px;padding: 10px;background-color: #fff;width: 200px;left: 86px;display: block;}
+.toothshadow > p{position: absolute;padding: 20px;background-color: #fff;width: 180px;height: 80px;left: 87px;top: 84px;line-height: 26px;border-radius: 10px;}
+#tooth2 > .toothshadow{left: 411px;}
+#tooth3 > .toothshadow{left: 411px;}
 
+#news a{float: left;}
 
+#news a img{border: 1px solid #000;}
+#news a{position: relative;}
+#news a + a{margin-left: 10px;}
+#news > a:first-child img{width: 494px;height: 494px;}
+#news a p{font-size: 27px;position: absolute;background: rgba(0, 0, 0, 0.788);color: #fff;left: 0;bottom: 0;width: 100%;height: 100px;line-height: 100px;opacity: 0;}
+#news a:hover p, a:focus p{opacity: 1;}
