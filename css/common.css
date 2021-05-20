@@ -1,5 +1,52 @@
 @charset "utf-8";
-@import url("../../s_core_css/s_core_all.css");
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('S-CoreDream-3Light.eot');
+  src: url('S-CoreDream-3Light.eot?#iefix') format('embedded-opentype'),
+       url('S-CoreDream-3Light.svg#S-CoreDream-3Light') format('svg'),
+       url('S-CoreDream-3Light.ttf') format('truetype'),
+       url('S-CoreDream-3Light.woff') format('woff'),
+       url('S-CoreDream-3Light.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'S-CoreDream-4Regular';
+  src: url('S-CoreDream-4Regular.eot');
+  src: url('S-CoreDream-4Regular.eot?#iefix') format('embedded-opentype'),
+       url('S-CoreDream-4Regular.svg#S-CoreDream-4Regular') format('svg'),
+       url('S-CoreDream-4Regular.ttf') format('truetype'),
+       url('S-CoreDream-4Regular.woff') format('woff'),
+       url('S-CoreDream-4Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'S-CoreDream-6Bold';
+  src: url('S-CoreDream-6Bold.eot');
+  src: url('S-CoreDream-6Bold.eot?#iefix') format('embedded-opentype'),
+       url('S-CoreDream-6Bold.svg#S-CoreDream-6Bold') format('svg'),
+       url('S-CoreDream-6Bold.ttf') format('truetype'),
+       url('S-CoreDream-6Bold.woff') format('woff'),
+       url('S-CoreDream-6Bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'S-CoreDream-5Medium';
+  src: url('S-CoreDream-5Medium.eot');
+  src: url('S-CoreDream-5Medium.eot?#iefix') format('embedded-opentype'),
+       url('S-CoreDream-5Medium.svg#S-CoreDream-5Medium') format('svg'),
+       url('S-CoreDream-5Medium.ttf') format('truetype'),
+       url('S-CoreDream-5Medium.woff') format('woff'),
+       url('S-CoreDream-5Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
 
 body, ul, p, h1, h2, h3, h4, h5, h6{margin: 0;padding: 0;}
 ul{list-style: none;}
