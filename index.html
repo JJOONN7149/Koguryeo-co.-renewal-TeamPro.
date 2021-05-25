@@ -8,14 +8,14 @@
   <title> 고구려대학교 인덱스 </title>
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
-
   <script src="js/jquery-1.12.4.min.js"></script>
   <script src="js/common.js"></script>
 </head>
 
 <body>
-  <div id="wrap" class="p_r">
-    <div id="skip"></div>
+  <div id="skip">
+    <a href="#container">본문 바로가기</a>
+    <div id="wrap" class="wrap p_r">    
     <header id="header">
       <h1 class="logo">
         <a href="">
@@ -75,16 +75,13 @@
       </div>
     </header>
     <section id="section">
-      <h2 class="blind">고구려 대학 소개</h2>
       <div class="visual_wrap">
-        <video id="video" poster="images/02_main/videothumbnail.jpg">          
-          <source src="video/kgr_video.mp4" type="video/mp4" autoplay muted loop
-           alt="고구려대학교의 주변 정경과 학생들의 모습을 보여준다">
+        <video id="video" poster="images/02_main/videothumbnail.jpg" source src="video/kgr_video.mp4" type="video/mp4" autoplay muted loop
+        alt="고구려대학교의 주변 정경과 학생들의 모습을 보여준다">          
         </video>
       </div>
       <p id="poster"><img src="images/02_main/poster_final.png" alt="무한한 기회의 고구려 대학교"></p>
       <div id="notice">
-        <!--  alt="공지사항" img 태그도 아닌데 alt 라니!!! -->
         <h3 class="blind">공지사항</h3>
         <a href="" class="news p_a"><img src="images/02_main/notice1_goods.png" alt="오막리지 굿즈 공모전 개최 2021년 5월 17일~ 2021년 5월 21일 개최. 자세한 사항은 사이트 참고"></a>
         <a href="" class="news p_a"><img src="images/02_main/notice2_fin_1.png" alt="21회 유화 페스티벌 개최. 2021년 5월 17일~ 2021년 5월 21일 개최. 자세한 사항은 사이트 참고"></a>
@@ -107,13 +104,13 @@
         <input id="input" type="text" placeholder="뭐든지 물어보세요!">
       </div>
     </section>
-    <footer id="footer" class="p_r">
-      <div class="wrap d_f">
+    <footer class="p_r"id="footer">
+      <div class="wrap  d_f">
         <div id="block1" class="f_l">
           <a href=""><img src="images/01_common/kgr_logo_long_white.png" alt="고구려 대학교"></a>
         </div>
         <div id="block2" class="f_block f_l">
-          <p>58280 전라남도 나주시<br>
+            <p>58280 전라남도 나주시<br>
             다시면 백호로 125 고구려대학교<br>
             TEL : 061-330-7400<br>
             FAX : 061-335-7128<br>

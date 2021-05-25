@@ -48,7 +48,7 @@ body{font-family: SCoreDream;}
 .family ul li a{display: block;padding-left: 15px;}
 .family ul li a:hover, .family ul li a:focus{background: #bd4848;color: #fff;}
 
-.f_navitem1 a{font-size: 32px;line-height: 2;letter-spacing: 5.18px;}/* transitions 하기 */
+.f_navitem1 a{font-size: 32px;line-height: 2;letter-spacing: 5.18px;}
 .f_navitem1 a:hover, .f_navitem1 a:focus{border-bottom: 2px solid #fff;}
 .f_navitem2{font-size: 16px;line-height: 2.5;}
 .f_navitem2 a:hover, .f_navitem2 a:focus{border-bottom: 1px solid #fff;}
