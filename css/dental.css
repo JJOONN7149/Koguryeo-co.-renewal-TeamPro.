@@ -1,15 +1,4 @@
 @charset "utf-8";
-
-
-body{background: #fff;}
-h1, h2, h3, h4,strong, th{font-size: inherit;font-weight: normal;}
-th, td,p{margin: 0;padding: 0;}
-table{border-spacing: 0;border-collapse: collapse;} 
-h4{display: block;}
-img{vertical-align: top;}
-.clearfix::after{clear: both;display: block;content: "";}
-#section{height: 5500px;;display: flex; flex-wrap: wrap;justify-content: center;}
-
 #top{height: 450px;width: 1920px;background-image: url("../images/10_dental/headerpic.png");flex-wrap: wrap;justify-content: center;}
 #top > h2{display: flex;font-size: 65px;font-weight: 500;justify-content: center;margin: 110px auto 0;color: #fff;}
 #top > p{font-size: 20px; font-weight: 300;color: #fff;display: flex; flex-wrap: wrap;justify-content: center;margin-bottom: 100px;}
@@ -37,10 +26,10 @@ img{vertical-align: top;}
 .shortcutul{display: flex; flex-wrap: wrap;justify-content: center;gap: 5%;row-gap: 20px;}
 .shortcut{flex-basis: 100px;max-width: 136px;  flex-grow: 1;display: inline-block;}
 
-h4{margin: 240px 0 53px 0;font-size: 33px;font-weight: 500;position: relative; height: 46px;padding-left: 33px;display: block;width: 100%;}
-h4::after{content: "";position: absolute;background: url("../images/10_dental/reddot.png");width: 22px;height: 22px;top: 12px;left: 0;}
+h4.sub_tit{margin: 240px 0 53px 0;font-size: 33px;font-weight: 500;position: relative; height: 46px;padding-left: 33px;display: block;width: 100%;}
+h4.sub_tit::after{content: "";position: absolute;background: url("../images/10_dental/reddot.png");width: 22px;height: 22px;top: 12px;left: 0;}
 
-#goal{width: 984px;height: 713px;background: url("../images/10_dental/gridlayout.png") no-repeat;position: relative;text-align: center;}
+#goal{width: 984px;height: 713px;background: url("../images/10_dental/gridlayout.png") no-repeat;position: relative;text-align: center;margin: 0 auto;}
 #goal .goaltxt{font-size: 16px;line-height: 23px;text-align: center;position: absolute;display: block;}
 #goal li p{width: 282px; height: 152px;}
 #goal li{float: left;}
@@ -52,11 +41,9 @@ h4::after{content: "";position: absolute;background: url("../images/10_dental/re
 #goal > strong:nth-child(1){top: 212px;left: 35px;}
 #goal > strong:nth-child(3){top: 428px; left: 733px;}
 
-#curriculum{width: 1256px;}
-#curriculum .column{width: 575px;height: 377px;line-height: 26px;float: left;padding-left: 20px;position: relative;margin-bottom: 20px;}
+#curriculum .column{width: 575px;height: 377px;line-height: 26px;float: left;padding-left: 20px;position: relative;margin-bottom: 70px;margin-right: 45px;}
 #curriculum .column::after{content: "";position: absolute;width: 7px;height: 100%;background-color: #e9c7a4;top: 0;left: 0;}
 #curriculum .column .txtbox strong{font-size: 22px;height: 66px;display: inline-block;padding: 7px 0 0 5px;width: 100%;}
-#curriculum #column1{margin-right: 20px;}
 #curriculum #column1 .txtbox:nth-child(1) strong{background: url("../images/10_dental/oneside1.png") no-repeat;}
 #curriculum #column1 .txtbox:nth-child(2) strong{background: url("../images/10_dental/oneside3.png")no-repeat;}
 #curriculum #column2 .txtbox:nth-child(1) strong{background: url("../images/10_dental/oneside2.png")no-repeat;}
@@ -65,14 +52,14 @@ h4::after{content: "";position: absolute;background: url("../images/10_dental/re
 #curriculum #column1 .txtbox:nth-child(1), #curriculum #column2 .txtbox:nth-child(1){margin-bottom: 18px;}
 #curriculum .column .txtbox strong + p{font-size: 16px;margin-top: 5px;}
 
-#process{text-align: center;margin-top: 50px;}
+#process{clear: both;text-align: center;width: 100%;}
+#process caption{font-size: 0;line-height: 0;}
 #process td{border-left: 1px solid #73615B;border-bottom: 1px solid #73615B;}
 #process th{border-bottom: 1px solid #73615B;background-color: #e9c7a4;}
 #process th + th{border-left: 1px solid #73615B;}
 #process th, #process td{padding: 30px;}
-.wid190{width: 190px;}
-.wid272{width: 255px;}
-.wid388{width: 388px;}
+.wid196{width: 196px;}
+.wid300{width: 300px;}
 .wid388{width: 388px;}
 .wid396{width: 396px;}
  
@@ -85,11 +72,8 @@ h4::after{content: "";position: absolute;background: url("../images/10_dental/re
 .toothprof > a{width: 92px;height: 27px;background: #BD4848;color: #fff;box-sizing: border-box;border-radius: 5px;top: 370px;left: 152.9px;padding-right: 15px;line-height: 27px;}
 .toothprof > a::after{content: "";background: url("../images/10_dental/arrow-forward_white.png") no-repeat; width: 10px; height: 17px;position: absolute;top:4.5px;left: 66px;}
 #tooth1 , #tooth2, #tooth3{position: relative;text-align: center;}
-.toothshadow{background: url("../images/10_dental/toothshadow.png") no-repeat;width: 400px;height: 300px;position: absolute;top: 480px;z-index: -1;opacity: 1;opacity: 0;}
+.toothshadow{display: none;background: url("../images/10_dental/toothshadow.png") no-repeat;width: 400px;height: 300px;position: absolute;top: 480px;z-index: -1;}
 .toothshadow > p{position: absolute;padding: 20px;background-color: #fff;width: 180px;height: 80px;left: 87px;top: 84px;line-height: 26px;border-radius: 10px;}
-.toothprof a:hover{opacity: 01;}
-
-
 
 #news a{float: left;}
 

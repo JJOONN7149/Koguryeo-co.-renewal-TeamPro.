@@ -2,12 +2,13 @@
 body{background: #000;}
 
 #wrap{min-width: 1366px;}
-/* header가 sub 랑 같다면 common.css로 이동시킵시다 */
-#header{position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.315); width: 100%;  height: 80px; padding: 0 70px; box-sizing: border-box; z-index: 100;}
+
+#header{position: fixed; top: 0; left: 0; background: rgba(0, 0, 0, 0.315); width: 100%;  height: 80px; padding: 0 70px; box-sizing: border-box; z-index: 100;transition: background 0.5s;}
+#header.bg_dark{background: rgba(0, 0, 0, 0.7);}
 #header.active::before{content: ''; position: absolute; background: #e9c7a4; top: 80px; left: 0; width: 100%; height: 49px;}
 #header > div:first-child{max-width: 1763px; margin: 0 auto; border-bottom: 1px solid #999;}
 #header .logo a{position: fixed; top: 5px; left: 70px; width: 290px; height: 70px; vertical-align: middle; background: url("../images/01_common/kgr_logo_long_white.png") no-repeat left center; background-size: contain; z-index: 120;}
-#header .search a{position: fixed; top: 25px; right: 70px; width: 30px; height: 30px; background: url("../images/01_common/이훈_icon/search_white.png") no-repeat right top; background-size: cover; z-index: 120;}
+#header .search a{position: fixed; top: 25px; right: 70px; width: 30px; height: 30px; background: url("../images/01_common/search_white.png") no-repeat right top; background-size: cover; z-index: 120;}
 
 /* #gnb */
 #gnb{text-align: center;}
@@ -27,8 +28,6 @@ body{background: #000;}
 
 #poster img{max-width: 100%;}
 
-/* 40.10416666666667 770 */
-
 #notice{position: relative;min-height: 768px;padding-top: 56.25%;box-sizing: border-box; background: url("../images/02_main/notice_final.jpg") no-repeat;background-size: contain;}
 #notice > a:nth-of-type(1){top: 2.4479vw; right: 23.9%; width: 35.85%; }
 #notice > a:nth-of-type(2){top: 2.4479vw; right: 4%; width: 16.3%; }
@@ -37,13 +36,9 @@ body{background: #000;}
 
 #qnapage h3 img{max-width: 100%;}
 
-#searchb a, #searchb a img, #moreb a, #moreb a img, #input{position: absolute;}
+#searchb a, #searchb a img, #moreb a, #moreb a img{position: absolute;}
 #searchb a{top: 29.5%;right: 5%;width: 27.798%;}
 #moreb a{bottom: 44%;left: 20.52%;width: 38.676%;}
-#searchb a img{top: 0;left: 0;max-width: 100%;}
-#moreb a img{top: 20px;left: 0;max-width: 100%;}
-#moreb a .more_e{top: 8px;}
+#searchb a img, #moreb a img{top: 0;left: 0;max-width: 100%;}
 #searchb a .search_e, #moreb a .more_e{opacity: 0;transition: opacity 0.5s;}
 #searchb a:hover img, #searchb a:focus img, #moreb a:hover img, #moreb a:focus img{opacity: 1;}
-#input{background: none;font-size: 50px;border: none;width: 740px;height: 80px;top: 39%;left: 20.52%;transform: rotate(-0.7deg);-ms-transform: rotate(-0.7deg);-webkit-transform: rotate(-0.7deg);}
-

@@ -1,5 +1,5 @@
-$(document).ready(function () {
-  var $header = $('#header');
+$(document).ready(function (){
+	var $header = $('#header');
 	var $gnb=$("#gnb > ul");
 	$gnb.find(" li ul").hide();	//depth2의 ul 태그는 자동으로 숨기고 시작
 
@@ -28,48 +28,65 @@ $(document).ready(function () {
 			}1
 		}, 10);
 	});
+
+	/* 패밀리사이트 */
+	//1-1) .btn_fopen을 클릭해서 ul 태그 열어주기
+	$("#footer .family .btn_fopen").on("click",function  (e) {
+		e.preventDefault();
+		
+		var $openBtn = $(this);  //선택한 열기 버튼
+		var $family = $openBtn.closest('.family'); //선택한 열기버튼의 부모 .family
+		var $btnSubmit =	$family.find(".btn_go");		//확인(새창열기 버튼)
+		var tgHref; //이동할 경로명
+
+		$openBtn.next().stop().show().parent().addClass('on');
+
+		//1-2) ul 태그에서 마우스가 떠나면 닫아주기
+		$openBtn.next().on("mouseleave",function  () {
+			$(this).stop().hide().parent().removeClass('on');
+		});
+
+		//1-3) focus가 family 내부에 있지 않을 경우 닫아주기
+		$family.find(".btn_fopen , .btn_go").on("blur",function  () {
+			setTimeout(function  () {
+				if (!$family.find("a").is(":focus")) $family.find(">ul").stop().hide();
+			}, 1000);
+		});
+
+		//2) ul li a를 클릭하면 자신의 텍스트와 href를 변수에 담아 $openBtn에 글자를 강제로 바꾼다=> ul 태그 닫아주기
+		$family.find(">ul>li>a").on("click",function  (e) {
+			e.preventDefault();
+			var tgTxt=$(this).text();
+			tgHref=$(this).attr("href");
+			console.log(tgTxt, tgHref);
+
+			$openBtn.text(tgTxt).focus().next().stop().show();
+		});
+
+		//3) 확인버튼 눌러 페이지 이동시키기
+		$btnSubmit.on("click",function  (e) {
+			e.preventDefault();
+			if ($openBtn.text()=="학과홈페이지 바로가기" || $openBtn.text()=="부속기관 바로가기") return false;
+	
+			//window.open("열려질 새창의 경로명","팝업창 이름","옵션");
+			window.open(tgHref, "popup");
+		});
+
+	});
+
+
+	var scrollT;
+	var timer = 0;
   
-  /* 패밀리사이트 */
-	var $family=$("#footer .family");
-	var $btn = $family.find("a").first();		//depth1 a:Family Site라는 텍스트가 담긴 링크
-	var $btnSubmit =	$family.find("a").last();		//확인(새창열기 버튼)
-	var tgHref;
+	//scroll 되면 빨강 배경색 추가
+	$(window).on('scroll', function () {
+	  clearTimeout(timer);
   
-  //1-1) $btn을 클릭해서 ul 태그 열어주기
-$btn.on("click",function  (e) {
-  e.preventDefault();
-
-  $(this).next().stop().show().parent().addClass('on');
-
-  //1-2) ul 태그에서 마우스가 떠나면 닫아주기
-  $(this).next().on("mouseleave",function  () {
-    $(this).stop().hide().parent().removeClass('on');
-  });
-
-  //1-3) focus가 family 내부에 있지 않을 경우 닫아주기
-  $family.find("a:first , a:last").on("blur",function  () {
-    setTimeout(function  () {
-      if (!$family.find("a").is(":focus")) $family.find(">ul").stop().hide();
-    }, 1000);
-  });
-
-  //2) ul li a를 클릭하면 자신의 텍스트와 href를 변수에 담아 $btn에 글자를 강제로 바꾼다=> ul 태그 닫아주기
-  $family.find(">ul>li>a").on("click",function  (e) {
-    e.preventDefault();
-    var tgTxt=$(this).text();
-    tgHref=$(this).attr("href");
-    //console.log(tgTxt, tgHref);
-
-    $btn.text(tgTxt).focus().next().stop().show();
-  });
-});
-
-//3) 확인버튼 눌러 페이지 이동시키기
-$btnSubmit.on("click",function  (e) {
-  e.preventDefault();
-  if ($btn.text()=="Family Site") return false;
-
-  //window.open("열려질 새창의 경로명","팝업창 이름","옵션");
-  window.open(tgHref, "popup");
-});
+	  setTimeout(function () {
+		scrollT = $(this).scrollTop();
+  
+		if (scrollT > 20) $('#header').addClass('bgchange');
+		else $('#header').removeClass('bgchange');
+	  }, 50);
+	});
 });
